@@ -20,18 +20,6 @@ git clone https://github.com/erdos-project/frenet_optimal_trajectory_planner.git
 cd frenet_optimal_trajectory_planner/
 bash build.sh
 
-###### Build the RRT* Planner ######
-cd $PYLOT_HOME/dependencies/
-git clone https://github.com/erdos-project/rrt_star_planner.git
-cd rrt_star_planner/
-bash build.sh
-
-###### Build the Hybrid A* Planner ######
-cd $PYLOT_HOME/dependencies/
-git clone https://github.com/erdos-project/hybrid_astar_planner.git
-cd hybrid_astar_planner/
-bash build.sh
-
 ###### Clone the Prediction Repository #####
 cd $PYLOT_HOME
 cd pylot/prediction/
@@ -65,11 +53,11 @@ wget https://www.dropbox.com/s/i6v54gng0rao6ff/drn_d_22_cityscapes.pth
 ###### Download the DASiamRPN object tracker models ######
 cd $PYLOT_HOME/dependencies/models
 mkdir -p tracking/DASiamRPN ; cd tracking/DASiamRPN
-# SiamRPNVOT.model
+ SiamRPNVOT.model
 ~/.local/bin/gdown https://drive.google.com/uc?id=1G9GtKpF36-AwjyRXVLH_gHvrfVSCZMa7
-# SiamRPNBIG.model
+ SiamRPNBIG.model
 ~/.local/bin/gdown https://drive.google.com/uc?id=1_bIGtHYdAoTMS-hqOPE1j3KU-ON15cVV
-# SiamRPNOTB.model
+ SiamRPNOTB.model
 ~/.local/bin/gdown https://drive.google.com/uc?id=18-LyMHVLhcx6qBWpUJEcPFoay1tSqURI
 
 ##### Download AnyNet depth estimation models #####
@@ -84,7 +72,7 @@ cd $PYLOT_HOME/dependencies/models
 mkdir -p tracking/deep-sort ; cd tracking/deep-sort
 ~/.local/bin/gdown https://drive.google.com/uc?id=1bB66hP9voDXuoBoaCcKYY7a8IYzMMs4P
 cd ../
-# Download the CARLA model.
+ Download the CARLA model.
 mkdir deep-sort-carla ; cd deep-sort-carla
 wget https://www.dropbox.com/s/j007vs40f9tlcui/feature_extractor
 
@@ -98,7 +86,7 @@ cd $PYLOT_HOME/dependencies/
 ###### Get the EfficientDet code ######
 git clone https://github.com/ICGog/automl.git
 
-###### Get DeepSORT and SORT tracker code bases ######
+###### Get DeepSORT and SORT tracker code bases #######
 git clone https://github.com/ICGog/nanonets_object_tracking.git
 sudo apt-get install python3-tk
 git clone https://github.com/ICGog/sort.git
@@ -109,7 +97,7 @@ git clone https://github.com/ICGog/DaSiamRPN.git
 ##### Download the Lanenet code #####
 git clone https://github.com/ICGog/lanenet-lane-detection.git
 mv lanenet-lane-detection lanenet
-#pip3 install glog loguru
+pip3 install glog loguru
 
 ###### Download the DRN segmentation code ######
 git clone https://github.com/ICGog/drn.git
